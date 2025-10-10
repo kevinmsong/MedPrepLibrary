@@ -29,7 +29,7 @@ MedPrepLibrary is a comprehensive, document-faithful medical education platform 
 - Custom deck creation by topic and system
 - Progress tracking and review scheduling
 
-### 📖 Document-Faithful Wiki
+### 📖 Document-Adherent Wiki
 - Comprehensive medical wiki organized by systems and topics
 - Cross-linked pages for easy navigation
 - Full-text search functionality
