@@ -1,0 +1,662 @@
+/* ============================================
+   SIDEBAR: Force Visible and Expanded
+   ============================================ */
+
+/* Ensure sidebar is always visible */
+section[data-testid="stSidebar"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    width: 21rem !important;
+    min-width: 21rem !important;
+    max-width: 21rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* Ensure sidebar content is visible */
+section[data-testid="stSidebar"] > div:first-child {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Hide the collapse button if it exists */
+button[kind="header"] {
+    display: none !important;
+}
+
+/* ============================================
+   FIX: Hide Streamlit Header/Toolbar & White Box
+   ============================================ */
+
+/* Hide ALL Streamlit headers and toolbars */
+header[data-testid="stHeader"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
+.stApp > header {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+div[data-testid="stToolbar"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+div[data-testid="stDecoration"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+div[data-testid="stStatusWidget"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Remove ALL top padding and margins */
+.main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.main .block-container {
+    padding-top: 0.5rem !important;
+    margin-top: 0 !important;
+}
+
+.appview-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Hide "Deploy" button and menu */
+#MainMenu {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+footer {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+/* Hide Streamlit branding */
+.viewerBadge_container__1QSob {
+    display: none !important;
+}
+
+/* ============================================
+   GLOBAL STYLES - IMPROVED READABILITY
+   ============================================ */
+
+:root {
+    --primary-color: #0066CC;
+    --primary-hover: #0052A3;
+    --secondary-color: #28A745;
+    --secondary-hover: #218838;
+    --accent-color: #FF6B35;
+    --background-main: #FFFFFF;
+    --background-card: #F8F9FA;
+    --text-primary: #212529;
+    --text-secondary: #6C757D;
+    --success-color: #28A745;
+    --success-bg: #D4EDDA;
+    --error-color: #DC3545;
+    --error-bg: #F8D7DA;
+    --warning-color: #FFC107;
+    --warning-bg: #FFF3CD;
+    --info-color: #17A2B8;
+    --info-bg: #D1ECF1;
+    --border-radius: 8px;
+    --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --transition: all 0.2s ease;
+}
+
+/* Main container */
+.main {
+    background-color: var(--background-main) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+}
+
+.block-container {
+    padding: 1rem 2rem 2rem 2rem !important;
+    max-width: 1400px !important;
+}
+
+/* ============================================
+   TYPOGRAPHY - BETTER CONTRAST
+   ============================================ */
+
+h1 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    font-size: 2.25rem !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 0.5rem !important;
+}
+
+h2 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    font-size: 1.75rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+h3 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+p, li, span, div {
+    color: var(--text-primary) !important;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* ============================================
+   SIDEBAR - MUCH BETTER READABILITY
+   ============================================ */
+
+section[data-testid="stSidebar"] {
+    background-color: #F8F9FA !important;
+    padding: 1.5rem 1rem !important;
+    border-right: 1px solid #DEE2E6 !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    background-color: transparent !important;
+}
+
+/* Sidebar text - HIGH CONTRAST */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #212529 !important;
+    font-weight: 700 !important;
+}
+
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] div {
+    color: #212529 !important;
+}
+
+/* Sidebar links */
+section[data-testid="stSidebar"] a {
+    color: #007BFF !important;
+    text-decoration: none !important;
+}
+
+section[data-testid="stSidebar"] a:hover {
+    color: #0056B3 !important;
+    text-decoration: underline !important;
+}
+
+/* Sidebar buttons */
+section[data-testid="stSidebar"] .stButton > button {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+    background-color: #007BFF !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+section[data-testid="stSidebar"] .stButton > button:hover {
+    background-color: #0056B3 !important;
+}
+
+/* Sidebar inputs */
+section[data-testid="stSidebar"] .stTextInput > div > div > input {
+    background-color: white !important;
+    border: 1px solid #CED4DA !important;
+    color: #212529 !important;
+}
+
+section[data-testid="stSidebar"] .stTextInput > div > div > input::placeholder {
+    color: #6C757D !important;
+}
+
+section[data-testid="stSidebar"] .stTextInput label {
+    color: #212529 !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================
+   BUTTONS - BETTER CONTRAST
+   ============================================ */
+
+.stButton > button {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    border-radius: var(--border-radius) !important;
+    padding: 0.65rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border: none !important;
+    box-shadow: var(--box-shadow-sm) !important;
+    transition: var(--transition) !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--secondary-hover) !important;
+    box-shadow: var(--box-shadow-md) !important;
+    transform: translateY(-1px) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Primary button variant */
+.stButton > button[kind="primary"] {
+    background-color: var(--primary-color) !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* Secondary button variant */
+.stButton > button[kind="secondary"] {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background-color: #F8F9FA !important;
+    border-color: var(--primary-hover) !important;
+}
+
+/* ============================================
+   INPUT FIELDS - BETTER VISIBILITY
+   ============================================ */
+
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div > select {
+    border-radius: var(--border-radius) !important;
+    border: 1px solid #CED4DA !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 1rem !important;
+    transition: var(--transition) !important;
+    background-color: white !important;
+    color: var(--text-primary) !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus,
+.stSelectbox > div > div > select:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(44, 95, 141, 0.15) !important;
+    outline: none !important;
+}
+
+.stTextInput label,
+.stTextArea label,
+.stSelectbox label {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* ============================================
+   CARDS & CONTAINERS
+   ============================================ */
+
+.element-container {
+    margin-bottom: 1rem;
+}
+
+/* Metric cards */
+div[data-testid="stMetric"] {
+    background-color: var(--background-card) !important;
+    padding: 1.25rem !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--box-shadow-sm) !important;
+    border: 1px solid #DEE2E6 !important;
+    transition: var(--transition) !important;
+}
+
+div[data-testid="stMetric"]:hover {
+    box-shadow: var(--box-shadow-md) !important;
+    transform: translateY(-2px) !important;
+}
+
+div[data-testid="stMetric"] label {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+}
+
+div[data-testid="stMetric"] div {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* ============================================
+   ALERTS & MESSAGES - BETTER CONTRAST
+   ============================================ */
+
+.stAlert {
+    border-radius: var(--border-radius) !important;
+    border-left: 4px solid !important;
+    padding: 1rem 1.25rem !important;
+    margin: 1rem 0 !important;
+}
+
+/* Success alert */
+div[data-baseweb="notification"][kind="success"] {
+    background-color: var(--success-bg) !important;
+    border-left-color: var(--success-color) !important;
+    color: #155724 !important;
+}
+
+/* Error alert */
+div[data-baseweb="notification"][kind="error"] {
+    background-color: var(--error-bg) !important;
+    border-left-color: var(--error-color) !important;
+    color: #721C24 !important;
+}
+
+/* Warning alert */
+div[data-baseweb="notification"][kind="warning"] {
+    background-color: var(--warning-bg) !important;
+    border-left-color: var(--warning-color) !important;
+    color: #856404 !important;
+}
+
+/* Info alert */
+div[data-baseweb="notification"][kind="info"] {
+    background-color: var(--info-bg) !important;
+    border-left-color: var(--info-color) !important;
+    color: #0C5460 !important;
+}
+
+/* ============================================
+   EXPANDERS
+   ============================================ */
+
+.streamlit-expanderHeader {
+    background-color: var(--background-card) !important;
+    border-radius: var(--border-radius) !important;
+    border: 1px solid #DEE2E6 !important;
+    padding: 0.85rem 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    transition: var(--transition) !important;
+}
+
+.streamlit-expanderHeader:hover {
+    border-color: var(--primary-color) !important;
+    background-color: #F8F9FA !important;
+}
+
+.streamlit-expanderContent {
+    border: 1px solid #DEE2E6 !important;
+    border-top: none !important;
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+    padding: 1.25rem !important;
+    background-color: white !important;
+}
+
+/* ============================================
+   TABLES - BETTER READABILITY
+   ============================================ */
+
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 1rem 0 !important;
+    background-color: white !important;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--box-shadow-sm) !important;
+    border: 1px solid #DEE2E6 !important;
+}
+
+thead tr {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+thead th {
+    padding: 0.85rem !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+    color: white !important;
+}
+
+tbody tr {
+    border-bottom: 1px solid #DEE2E6 !important;
+    transition: var(--transition) !important;
+}
+
+tbody tr:hover {
+    background-color: #F8F9FA !important;
+}
+
+tbody td {
+    padding: 0.85rem !important;
+    color: var(--text-primary) !important;
+}
+
+/* ============================================
+   PROGRESS BARS
+   ============================================ */
+
+.stProgress > div > div > div {
+    background-color: var(--secondary-color) !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+}
+
+.stProgress > div > div {
+    background-color: #E9ECEF !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+}
+
+/* ============================================
+   TABS
+   ============================================ */
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem !important;
+    background-color: transparent !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: white !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    padding: 0.75rem 1.5rem !important;
+    border: 1px solid #DEE2E6 !important;
+    border-bottom: none !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    transition: var(--transition) !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #F8F9FA !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F1F1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CED4DA;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ADB5BD;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.15rem !important;
+    }
+    
+    .stButton > button {
+        padding: 0.5rem 1.25rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.info-box {
+    background-color: var(--info-bg);
+    border-left: 4px solid var(--info-color);
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    color: #0C5460;
+}
+
+.warning-box {
+    background-color: var(--warning-bg);
+    border-left: 4px solid var(--warning-color);
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    color: #856404;
+}
+
+.success-box {
+    background-color: var(--success-bg);
+    border-left: 4px solid var(--success-color);
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    color: #155724;
+}
+
+.error-box {
+    background-color: var(--error-bg);
+    border-left: 4px solid var(--error-color);
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    color: #721C24;
+}
+/* ============================================
+   FIX: Remove white box above config panel
+   ============================================ */
+
+/* Remove default Streamlit container padding/margins */
+.main .block-container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove spacing between elements */
+.element-container {
+    margin-bottom: 0 !important;
+}
+
+/* Config panel styling - no white box */
+.config-panel {
+    background: transparent !important;
+    padding: 1.5rem 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.config-title {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: var(--primary-color) !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.status-success {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+}
+
+.status-warning {
+    background-color: #FFF3CD;
+    color: #856404;
+    border: 1px solid #FFEAA7;
+}
+
+/* Main header - no gap below */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    color: white !important;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+.main-header h1 {
+    color: white !important;
+    margin: 0 !important;
+    font-size: 2.5rem !important;
+}
+
+.main-header p {
+    color: white !important;
+    margin: 0.5rem 0 0 0 !important;
+    font-size: 1.1rem !important;
+    opacity: 0.95;
+}
+
