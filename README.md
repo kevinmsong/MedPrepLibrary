@@ -11,7 +11,7 @@ MedPrepLibrary is a comprehensive, document-faithful medical education platform 
 ## ✨ Features
 
 ### 🤖 AI-Powered Question Answering
-- Ask any medical question and receive comprehensive, document-faithful answers
+- Ask any medical question and receive comprehensive, document-adherent answers
 - Powered by Google's Gemini 2.0 Flash AI model
 - Retrieval-Augmented Generation (RAG) ensures accuracy with source citations
 - Context-aware responses from authoritative medical textbooks
